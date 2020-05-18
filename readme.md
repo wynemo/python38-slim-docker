@@ -20,7 +20,7 @@ WORKDIR /app
 COPY --from=builder /venv /venv
 RUN groupadd -g ${gid} $user
 RUN useradd -u ${uid} -g ${gid} $user
-RUN chown -R ${user}:${user} /sonarx
+RUN chown -R ${user}:${user} /app
 # Tell docker that all future commands should run as the appuser user
 USER ${user}
 ENV PATH=/venv/bin:$PATH
