@@ -4,3 +4,5 @@ WORKDIR /
 #RUN sed -i 's/security.debian.org/mirrors.aliyun.com/g' /etc/apt/sources.list
 RUN apt-get update
 RUN apt-get install -y g++ libssl-dev libffi-dev
+
+RUN python -m venv venv
