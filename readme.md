@@ -37,6 +37,6 @@ sudo docker build \
   --build-arg uid=$(id -u user) \
   --build-arg gid=$(id -g user) \
   -f ./docker/Dockerfile . -t  $MAINIMAGE
-sudo docker run --rm --name pip_copyer -v $PWD/sonarx/pip_cache:/tmp/pip_cache app_pip sh -c 'cp /pip_cache/* /tmp/pip_cache/'
+sudo docker run --rm --name pip_copyer -v $PWD/pip_cache:/tmp/pip_cache app_pip sh -c 'cp /pip_cache/* /tmp/pip_cache/'
 
 ```
